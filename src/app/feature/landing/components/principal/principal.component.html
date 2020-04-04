@@ -1,0 +1,8 @@
+<ng-container *ngIf="(producto$ | async) let producto; else loading">
+  <p>id: {{producto.id}}</p>
+  <p>cantidad: {{producto.cant}}</p>
+  <p>nombre: {{producto.nombre}}</p>
+</ng-container>
+<ng-template #loading>
+  <p>cargando...</p>
+</ng-template>
