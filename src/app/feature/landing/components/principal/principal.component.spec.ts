@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PrincipalComponent } from './principal.component';
-import { LandingInitialService } from '@feature/landing/service/landing-initial/landing-initial.service';
+import { LandingInitialService } from '@feature/landing/shared/service/landing-initial/landing-initial.service';
 import SpyObj = jasmine.SpyObj;
 import createSpyObj = jasmine.createSpyObj;
 import { of } from 'rxjs';

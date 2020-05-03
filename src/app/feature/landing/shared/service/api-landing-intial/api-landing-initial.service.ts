@@ -2,7 +2,7 @@ import { Observable, of } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ProductoModel } from '@feature/landing/model/producto.model';
+import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 import { ApiResponseModel } from '@shared/model/api-response.model';
 import { LoggerService } from '@shared/service/logger/logger.service';
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { ApiLandingInitialService } from '../api-landing-intial/api-landing-initial.service';
-import { ProductoModel } from '@feature/landing/model/producto.model';
+import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 import { LoggerService } from '@shared/service/logger/logger.service';
 
 @Injectable()

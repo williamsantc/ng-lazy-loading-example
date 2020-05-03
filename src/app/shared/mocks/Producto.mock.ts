@@ -1,4 +1,4 @@
-import { ProductoModel } from '@feature/landing/model/producto.model';
+import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 
 export class ProductoMock {
 
