@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { PrincipalComponent } from './principal/principal.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import { SelfManagedPresenterComponent } from './principal/presenters/self-managed-presenter/self-managed-presenter.component';
+import { PrincipalModule } from '@feature/admin/principal/principal.module';
 
 @NgModule({
-  declarations: [PrincipalComponent],
-  imports: [AdminRoutingModule]
+  declarations: [SelfManagedPresenterComponent],
+  imports: [AdminRoutingModule, PrincipalModule]
 })
 export class AdminModule { }

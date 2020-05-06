@@ -8,7 +8,7 @@ import { HttpInterceptor } from '@angular/common/http';
   templateUrl: './principal.component.html',
   styleUrls: ['./principal.component.scss']
 })
-export class PrincipalComponent implements HttpInterceptor {
+export class PrincipalComponent implements OnInit {
 
   public producto$: Observable<ProductoModel>;
 
