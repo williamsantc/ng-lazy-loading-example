@@ -26,3 +26,5 @@ export class PrincipalComponent implements OnInit {
   }
 
 }
+
+// DOC: https://angular.io/guide/dynamic-component-loader
