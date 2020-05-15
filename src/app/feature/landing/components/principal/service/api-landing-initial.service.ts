@@ -1,15 +1,13 @@
 import { Observable, of } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 import { ApiResponseModel } from '@shared/model/api-response.model';
 import { LoggerService } from '@shared/service/logger/logger.service';
 
 @Injectable()
 export class ApiLandingInitialService {
-  constructor(private readonly httpClient: HttpClient,
-              private readonly loggerService: LoggerService) {
+  constructor(private readonly loggerService: LoggerService) {
   }
 
   public getInitialText(): Observable<ApiResponseModel<ProductoModel>> {
