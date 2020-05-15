@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
-import { ApiLandingInitialService } from '../api-landing-intial/api-landing-initial.service';
+import { ApiLandingInitialService } from '../service/api-landing-initial.service';
 import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 import { LoggerService } from '@shared/service/logger/logger.service';
 
 @Injectable()
-export class LandingInitialService {
+export class LandingInitialPresenter {
 
   constructor(private readonly apiLandingInitialService: ApiLandingInitialService,
               private readonly loggerService: LoggerService) {

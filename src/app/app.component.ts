@@ -7,18 +7,4 @@ import { Component, Injectable } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-lazy-loading';
-  constructor(private readonly someService: SomeService) {
-  }
-}
-
-@Injectable({providedIn: 'root'})
-class SomeService {
-  constructor(private readonly someService: SomeOtherService) { }
-}
-
-@Injectable({providedIn: 'root'})
-class SomeOtherService {
-  constructor(private readonly someService: SomeService) {
-  }
-
 }

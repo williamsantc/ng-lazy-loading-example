@@ -4,7 +4,6 @@ import { SelfManagedPresenterComponent } from './principal/presenters/self-manag
 import { PrincipalModule } from '@feature/admin/principal/principal.module';
 
 @NgModule({
-  declarations: [SelfManagedPresenterComponent],
   imports: [AdminRoutingModule, PrincipalModule]
 })
 export class AdminModule { }

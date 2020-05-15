@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PrincipalComponent } from './principal.component';
-import { LandingInitialService } from '@feature/landing/shared/service/landing-initial/landing-initial.service';
+import { LandingInitialPresenter } from '@feature/landing/components/principal/presenter/landing-initial.presenter';
 import SpyObj = jasmine.SpyObj;
 import createSpyObj = jasmine.createSpyObj;
 import { of } from 'rxjs';
@@ -11,14 +11,14 @@ describe('PrincipalComponent', () => {
 
   let component: PrincipalComponent;
   let fixture: ComponentFixture<PrincipalComponent>;
-  let landingInitialService: SpyObj<LandingInitialService>;
+  let landingInitialService: SpyObj<LandingInitialPresenter>;
 
   beforeEach(async(() => {
     landingInitialService = createSpyObj(['getInitialText']);
     TestBed.configureTestingModule({
       declarations: [PrincipalComponent],
       providers: [
-        {provide: LandingInitialService, useValue: landingInitialService}
+        {provide: LandingInitialPresenter, useValue: landingInitialService}
       ]
     })
     .compileComponents();

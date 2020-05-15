@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LandingInitialService } from '../../shared/service/landing-initial/landing-initial.service';
+import { LandingInitialPresenter } from './presenter/landing-initial.presenter';
 import { Observable } from 'rxjs';
-import { ProductoModel } from '../../shared/model/producto.model';
-import { HttpInterceptor } from '@angular/common/http';
+import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 
 @Component({
   templateUrl: './principal.component.html',
@@ -12,7 +11,7 @@ export class PrincipalComponent implements OnInit {
 
   public producto$: Observable<ProductoModel>;
 
-  constructor(private readonly landingInitialService: LandingInitialService) { }
+  constructor(private readonly landingInitialService: LandingInitialPresenter) { }
 
   // tslint:disable-next-line:ban-types
   ngOnInit(): NonNullable<any> {
