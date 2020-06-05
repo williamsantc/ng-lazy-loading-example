@@ -10,6 +10,10 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [PrincipalComponent, MisionComponent],
   imports: [LandingRoutingModule, HttpClientModule, CommonModule],
-  providers: [LandingInitialPresenter, ApiLandingInitialService]
+  providers: [
+    LandingInitialPresenter,
+    ApiLandingInitialService
+  ]
 })
-export class LandingModule {}
+export class LandingModule { }
+

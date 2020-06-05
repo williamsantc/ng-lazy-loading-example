@@ -11,11 +11,10 @@ export class PrincipalComponent implements OnInit {
 
   public producto$: Observable<ProductoModel>;
 
-  constructor(private readonly landingInitialService: LandingInitialPresenter) { }
+  constructor(private readonly service: LandingInitialPresenter) { }
 
-  // tslint:disable-next-line:ban-types
-  ngOnInit(): NonNullable<any> {
-    this.producto$ = this.landingInitialService.getInitialText();
+  ngOnInit() {
+    this.producto$ = this.service.getInitialText()
   }
 
 }

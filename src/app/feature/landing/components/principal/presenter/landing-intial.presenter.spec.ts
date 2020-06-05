@@ -4,7 +4,7 @@ import { of } from 'rxjs';
 import { ApiResponseModel } from '@shared/model/api-response.model';
 import { ProductoModel } from '@feature/landing/shared/model/producto.model';
 import { LoggerService } from '@shared/service/logger/logger.service';
-import { ProductoMock } from '@shared/mocks/Producto.mock';
+import { ProductoFixture } from '@shared/fixtures/producto.fixture';
 import createSpyObj = jasmine.createSpyObj;
 import SpyObj = jasmine.SpyObj;
 
@@ -23,10 +23,9 @@ describe('LandingInitialPresenter', () => {
   it('should return just producto', (doneFn) => {
     // Arrange
     const httpResponse: ApiResponseModel<ProductoModel> = {
-      data: ProductoMock.defaultMock(),
+      data: ProductoFixture.defaultMock(),
       notification: null,
     };
-
 
     apiLandingInitialService.getInitialText.and.returnValue(of(httpResponse));
 

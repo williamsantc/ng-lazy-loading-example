@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedServiceModule } from '@shared/service/shared-service.module';
+import { LoggerService } from '@shared/service/logger/logger.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +12,8 @@ import { SharedServiceModule } from '@shared/service/shared-service.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedServiceModule
   ],
-  providers: [],
+  providers: [LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,7 +5,7 @@ import { LandingInitialPresenter } from '@feature/landing/components/principal/p
 import SpyObj = jasmine.SpyObj;
 import createSpyObj = jasmine.createSpyObj;
 import { of } from 'rxjs';
-import { ProductoMock } from '@shared/mocks/Producto.mock';
+import { ProductoFixture } from '@shared/fixtures/producto.fixture';
 
 describe('PrincipalComponent', () => {
 
@@ -33,14 +33,14 @@ describe('PrincipalComponent', () => {
 
   it('should ngOnInit', () => {
     // Arrange
-    landingInitialService.getInitialText.and.returnValue(of(ProductoMock.defaultMock()));
+    landingInitialService.getInitialText.and.returnValue(of(ProductoFixture.defaultMock()));
 
     // Act
     component.ngOnInit();
     component.producto$.subscribe((producto) => {
 
       // Assert
-      expect(producto).toEqual(ProductoMock.defaultMock());
+      expect(producto).toEqual(ProductoFixture.defaultMock());
     });
 
 
